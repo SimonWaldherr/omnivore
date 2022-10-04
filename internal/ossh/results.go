@@ -76,7 +76,7 @@ func (s *StreamCycle) Initialise() {
 
 func GetSortedHostMapKeys(m map[string]struct{}) []string {
 	var keys []string
-	for k, _ := range m {
+	for k := range m {
 		keys = append(keys, k)
 	}
 

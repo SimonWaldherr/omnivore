@@ -49,7 +49,7 @@ func NewValueGrouping() *ValueGrouping {
 
 func GetSortedGroupMapKeys(m map[string][]string) []string {
 	var keys []string
-	for k, _ := range m {
+	for k := range m {
 		if k != "" {
 			keys = append(keys, k)
 		}

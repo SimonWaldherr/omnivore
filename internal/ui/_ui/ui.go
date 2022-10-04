@@ -9,15 +9,15 @@ import (
 )
 
 var (
-	dp *Data
+	dp      *Data
 	hostInc int
-    letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+	letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 )
 
 // Data needed for UI to process.
 type Data struct {
 	Grp *group.ValueGrouping
-	ui *gocui.Gui
+	ui  *gocui.Gui
 }
 
 func main() {
@@ -43,7 +43,7 @@ func main() {
 
 	dp.ui = g
 
-	go func(){
+	go func() {
 		for {
 			select {
 			case <-dp.Grp.Update:
@@ -81,7 +81,7 @@ func randSeq(n int) string {
 func makeData() {
 	MakeDP()
 
-	go func(){
+	go func() {
 		for {
 			select {
 			case <-dp.Grp.Update:

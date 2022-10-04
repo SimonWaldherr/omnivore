@@ -31,7 +31,7 @@ func TestStream_WithOutput_IntegrationWorkflow(t *testing.T) {
 	}
 
 	// Add all our hosts now, before we start processing output.
-	for host, _ := range conf.Config.Hosts {
+	for host := range conf.Config.Hosts {
 		s.TodoHosts[host] = struct{}{}
 	}
 

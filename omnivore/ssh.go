@@ -24,7 +24,7 @@ func OmniRun(cmd *OmniCommandFlags, safe chan struct{}, uiStarted chan struct{})
 	ui.Collective.StreamCycle = s
 
 	// Add all our hosts now, before we start processing output.
-	for host, _ := range conf.Config.Hosts {
+	for host := range conf.Config.Hosts {
 		s.TodoHosts[host] = struct{}{}
 	}
 
